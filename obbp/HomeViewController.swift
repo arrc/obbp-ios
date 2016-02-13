@@ -14,11 +14,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let session = Locksmith.loadDataForUserAccount("userSession")!
+        let session = Locksmith.loadDataForUserAccount("userSession")
         print(session)
-        if (session["token"] == nil) {
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginView") 
-            self.presentViewController(viewController, animated: true, completion: nil)
+        print(session?["token"] == nil)
+        if (session?["token"] == nil) {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginView") 
+                self.presentViewController(viewController, animated: true, completion: nil)
+            })
+            
         }
     }
 

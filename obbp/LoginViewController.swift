@@ -22,21 +22,7 @@ class LoginViewController: UIViewController {
     // init
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parameters = ["username": "admin", "password": "admin"]
         
-        
-        Alamofire.request(.POST, "http://localhost:3000/login", parameters: parameters).responseJSON { response in
-            if let JSON = response.result.value {
-                let token = JSON["token"] as! String
-                let user = JSON["user"] as! NSDictionary
-                
-                do {
-                    try Locksmith.saveData(["token" : token, "user" : user], forUserAccount: "userSession")
-                } catch {
-                    print("Error \(error)")
-                }
-            }
-        }
         
     }
 
@@ -46,7 +32,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        let parameters = ["username": "admin", "password": "admin"]
+        Alamofire.request(.POST, "http://localhost:3000/login", parameters: parameters).responseJSON { response in
+            if let JSON = response.result.value {
+                let token = JSON["token"] as! String
+                let user = JSON["user"] as! NSDictionary
+                
+                do {
+                    try Locksmith.saveData(["token" : token, "user" : user], forUserAccount: "userSession")
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                } catch {
+                    print("Error \(error)")
+                }
+            }
+        }
     }
     
     func loadProfile(){

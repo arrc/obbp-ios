@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="396" y="325"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="mQX-dk-Yb5">
             <objects>
-                <viewController id="gxX-ad-7ZQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileView" id="gxX-ad-7ZQ" customClass="ProfileViewController" customModule="obbp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wgd-eN-jBA"/>
                         <viewControllerLayoutGuide type="bottom" id="SGp-Yn-y54"/>
@@ -213,16 +213,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-Iu-7jV">
-                                <rect key="frame" x="142" y="193" width="46" height="30"/>
+                                <rect key="frame" x="131" y="364" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="T8h-4m-lkc" kind="show" id="ilx-KD-pjR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMd-nh-XAP">
+                                <rect key="frame" x="105" y="123" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rs-Jl-Hln">
+                                <rect key="frame" x="85" y="172" width="151" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ULT-7O-SaV"/>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="7Rs-Jl-Hln" id="gNi-IT-WAg"/>
+                        <outlet property="usernameLabel" destination="DMd-nh-XAP" id="Rwm-eo-f4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEK-Sy-FoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

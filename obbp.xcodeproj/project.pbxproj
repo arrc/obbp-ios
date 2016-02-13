@@ -11,6 +11,7 @@
 		901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B991C6F1011004699FE /* LoginViewController.swift */; };
 		901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */; };
 		907986381C6F9A2100E97084 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907986371C6F9A2100E97084 /* Session.swift */; };
+		90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B339781C6FBC620095B2B4 /* ProfileViewController.swift */; };
 		90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */; };
 		90BAD1271C6E2D0300D1DCDA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */; };
 		90BAD12A1C6E2D0300D1DCDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BAD1281C6E2D0300D1DCDA /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		901A4B991C6F1011004699FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIgnupViewController.swift; sourceTree = "<group>"; };
 		907986371C6F9A2100E97084 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		90B339781C6FBC620095B2B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		90BAD1211C6E2D0300D1DCDA /* obbp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obbp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */,
 				901A4B991C6F1011004699FE /* LoginViewController.swift */,
 				901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */,
+				90B339781C6FBC620095B2B4 /* ProfileViewController.swift */,
 				90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */,
 				90BAD12B1C6E2D0300D1DCDA /* Assets.xcassets */,
 				90BAD12D1C6E2D0300D1DCDA /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */,
 				907986381C6F9A2100E97084 /* Session.swift in Sources */,
 				901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */,
 				90BAD1271C6E2D0300D1DCDA /* HomeViewController.swift in Sources */,

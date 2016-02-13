@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5914DCF51968893364AB0E7C'
+               BlueprintIdentifier = 'FE6D03C31588674E71DC47F9'
                BlueprintName = 'Haneke'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Haneke.framework'>

@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-obbp/Alamofire.framework"
+  install_framework "Pods-obbp/CryptoSwift.framework"
   install_framework "Pods-obbp/Haneke.framework"
+  install_framework "Pods-obbp/JWT.framework"
   install_framework "Pods-obbp/Locksmith.framework"
   install_framework "Pods-obbp/MBProgressHUD.framework"
   install_framework "Pods-obbp/MMDrawerController.framework"
@@ -93,7 +95,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-obbp/Alamofire.framework"
+  install_framework "Pods-obbp/CryptoSwift.framework"
   install_framework "Pods-obbp/Haneke.framework"
+  install_framework "Pods-obbp/JWT.framework"
   install_framework "Pods-obbp/Locksmith.framework"
   install_framework "Pods-obbp/MBProgressHUD.framework"
   install_framework "Pods-obbp/MMDrawerController.framework"

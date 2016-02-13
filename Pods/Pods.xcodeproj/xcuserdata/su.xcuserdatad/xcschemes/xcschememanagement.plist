@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CryptoSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Haneke.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSONWebToken.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,17 +52,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>22F0CCAFF811FBC78649147EB7887307</key>
+		<key>2150A5AD050BEDB533A8A9E4BE6E4D8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>503EE6FE9600FD09E50C66E514462BF5</key>
+		<key>4DA5AC3C1B549565E20220F77D296F4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>721F5C363890DB3021CD23661305B2A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>749AEC0FFB6E76CF1851129B86A583DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -68,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>96D3562E47E4792B0A6093A0323EB398</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E595DA61934423759353435DDC8F2C94</key>
 		<dict>
 			<key>primary</key>
 			<true/>

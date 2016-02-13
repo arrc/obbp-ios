@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51141C8494B1B4840024FA97 /* Pods_obbp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BF8F95D7F0F7388EB2B6BC /* Pods_obbp.framework */; };
+		901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B991C6F1011004699FE /* LoginViewController.swift */; };
+		901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */; };
 		90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */; };
 		90BAD1271C6E2D0300D1DCDA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */; };
 		90BAD12A1C6E2D0300D1DCDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BAD1281C6E2D0300D1DCDA /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 		332A11D9713C2700141225FC /* Pods-obbp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obbp.release.xcconfig"; path = "Pods/Target Support Files/Pods-obbp/Pods-obbp.release.xcconfig"; sourceTree = "<group>"; };
 		39BF8F95D7F0F7388EB2B6BC /* Pods_obbp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_obbp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88047AD17270577F4999AF20 /* Pods-obbp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obbp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-obbp/Pods-obbp.debug.xcconfig"; sourceTree = "<group>"; };
+		901A4B991C6F1011004699FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIgnupViewController.swift; sourceTree = "<group>"; };
 		90BAD1211C6E2D0300D1DCDA /* obbp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = obbp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -70,9 +74,11 @@
 		90BAD1231C6E2D0300D1DCDA /* obbp */ = {
 			isa = PBXGroup;
 			children = (
-				90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */,
-				90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */,
 				90BAD1281C6E2D0300D1DCDA /* Main.storyboard */,
+				90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */,
+				901A4B991C6F1011004699FE /* LoginViewController.swift */,
+				901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */,
+				90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */,
 				90BAD12B1C6E2D0300D1DCDA /* Assets.xcassets */,
 				90BAD12D1C6E2D0300D1DCDA /* LaunchScreen.storyboard */,
 				90BAD1301C6E2D0300D1DCDA /* Info.plist */,
@@ -211,7 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */,
 				90BAD1271C6E2D0300D1DCDA /* HomeViewController.swift in Sources */,
+				901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */,
 				90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

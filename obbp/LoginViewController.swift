@@ -28,9 +28,10 @@ class LoginViewController: UIViewController {
         Alamofire.request(.POST, "http://localhost:3000/login", parameters: parameters).responseJSON { response in
             if let JSON = response.result.value {
                 let token = JSON["token"] as! String
-                print("TOKEN: \(token)")
+                let user = JSON["user"] as! NSDictionary
+                
                 do {
-                    try Locksmith.saveData(["token" : token], forUserAccount: "userToken")
+                    try Locksmith.saveData(["token" : token, "user" : user], forUserAccount: "userSession")
                 } catch {
                     print("Error \(error)")
                 }
@@ -45,7 +46,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
-        let dict = Locksmith.loadDataForUserAccount("userToken")!
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func loadProfile(){
+        let dict = Locksmith.loadDataForUserAccount("userSession")!
+        print("DICT: \(dict)")
         let headers = [
             "Authorization": "Bearer \(dict["token"]!)"
         ]

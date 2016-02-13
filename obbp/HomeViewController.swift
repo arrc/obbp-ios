@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Locksmith
 
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let session = Locksmith.loadDataForUserAccount("userSession")!
+        print(session)
+        if (session["token"] == nil) {
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginView") 
+            self.presentViewController(viewController, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +27,15 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didPressLogoutButton(sender: UIButton) {
+        do {
+            try Locksmith.deleteDataForUserAccount("userSession")
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginView")
+            self.presentViewController(viewController, animated: true, completion: nil)
+        } catch {
+            print("Error \(error)")
+        }
+    }
 
 }
 

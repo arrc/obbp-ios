@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-obbp/ActionSheetPicker_3_0.framework"
   install_framework "Pods-obbp/Alamofire.framework"
   install_framework "Pods-obbp/CryptoSwift.framework"
   install_framework "Pods-obbp/Haneke.framework"
@@ -91,9 +92,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-obbp/Locksmith.framework"
   install_framework "Pods-obbp/MBProgressHUD.framework"
   install_framework "Pods-obbp/MMDrawerController.framework"
+  install_framework "Pods-obbp/SDWebImage.framework"
   install_framework "Pods-obbp/SwiftyJSON.framework"
+  install_framework "Pods-obbp/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-obbp/ActionSheetPicker_3_0.framework"
   install_framework "Pods-obbp/Alamofire.framework"
   install_framework "Pods-obbp/CryptoSwift.framework"
   install_framework "Pods-obbp/Haneke.framework"
@@ -101,5 +105,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-obbp/Locksmith.framework"
   install_framework "Pods-obbp/MBProgressHUD.framework"
   install_framework "Pods-obbp/MMDrawerController.framework"
+  install_framework "Pods-obbp/SDWebImage.framework"
   install_framework "Pods-obbp/SwiftyJSON.framework"
+  install_framework "Pods-obbp/XLForm.framework"
 fi

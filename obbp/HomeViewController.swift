@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let session = Locksmith.loadDataForUserAccount("userSession")
-        print(session)
         print(session?["token"] == nil)
         if (session?["token"] == nil) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in

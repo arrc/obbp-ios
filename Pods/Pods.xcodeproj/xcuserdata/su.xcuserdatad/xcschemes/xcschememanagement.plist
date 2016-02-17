@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ActionSheetPicker-3.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,7 +49,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XLForm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,12 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2150A5AD050BEDB533A8A9E4BE6E4D8E</key>
+		<key>13A883E870B0573AF1313F349CFD5A2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4DA5AC3C1B549565E20220F77D296F4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E39E2C84A5067559CFEE85687C4896D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>75C950744F4E341D07628A1445F99FC4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8B73DC35A1C36C7C2C5DF09E05896417</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E595DA61934423759353435DDC8F2C94</key>
+		<key>E61BBB78AC572E6E994CF794D733B98B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

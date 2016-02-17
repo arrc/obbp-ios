@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 
 class SIgnupViewController: UITableViewController {
     
@@ -43,6 +44,7 @@ class SIgnupViewController: UITableViewController {
     
     // Gender control
     @IBAction func genderSelected(sender: UISegmentedControl) {
+        print(self.genderControl.selectedSegmentIndex)
     }
     
     // date of birth
@@ -59,6 +61,15 @@ class SIgnupViewController: UITableViewController {
     
     // state
     @IBAction func stateSelected(sender: UITextField) {
+        ActionSheetStringPicker.showPickerWithTitle("State", rows: ["Delhi", "Mumbai", "Pune"], initialSelection: 1, doneBlock: {
+            picker, value, index in
+            
+            print("value = \(value)")
+            print("index = \(index)")
+            print("picker = \(picker)")
+            self.stateTextField.text = index as? String
+            return
+            }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
     }
     
     // Done

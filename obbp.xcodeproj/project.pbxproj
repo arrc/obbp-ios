@@ -10,6 +10,7 @@
 		51141C8494B1B4840024FA97 /* Pods_obbp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BF8F95D7F0F7388EB2B6BC /* Pods_obbp.framework */; };
 		901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B991C6F1011004699FE /* LoginViewController.swift */; };
 		901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */; };
+		903542EB1C74F54E00494AC0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903542EA1C74F54D00494AC0 /* UserModel.swift */; };
 		906829621C70875C00C39C82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346C01C7024B100426287 /* SearchViewController.swift */; };
 		907986381C6F9A2100E97084 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907986371C6F9A2100E97084 /* Session.swift */; };
 		908346BF1C70246700426287 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346BE1C70246700426287 /* RequestViewController.swift */; };
@@ -27,6 +28,7 @@
 		88047AD17270577F4999AF20 /* Pods-obbp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obbp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-obbp/Pods-obbp.debug.xcconfig"; sourceTree = "<group>"; };
 		901A4B991C6F1011004699FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIgnupViewController.swift; sourceTree = "<group>"; };
+		903542EA1C74F54D00494AC0 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		907986371C6F9A2100E97084 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		908346BE1C70246700426287 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		908346C01C7024B100426287 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				908346BE1C70246700426287 /* RequestViewController.swift */,
 				908346C01C7024B100426287 /* SearchViewController.swift */,
 				90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */,
+				903542EA1C74F54D00494AC0 /* UserModel.swift */,
 				90BAD12B1C6E2D0300D1DCDA /* Assets.xcassets */,
 				90BAD12D1C6E2D0300D1DCDA /* LaunchScreen.storyboard */,
 				90BAD1301C6E2D0300D1DCDA /* Info.plist */,
@@ -236,6 +239,7 @@
 				901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */,
 				90BAD1271C6E2D0300D1DCDA /* HomeViewController.swift in Sources */,
 				901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */,
+				903542EB1C74F54E00494AC0 /* UserModel.swift in Sources */,
 				90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

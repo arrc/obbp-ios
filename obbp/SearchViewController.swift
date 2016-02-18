@@ -18,7 +18,7 @@ class SearchViewController: UIViewController {
     
     
     // Properties
-    
+    var users = [User]()
     
     // Init
     override func viewDidLoad() {
@@ -60,20 +60,31 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func serachPressed(sender: UIButton) {
-        let bloodGroup = self.bloodGroupTextField.text!
         let url: String = "http://localhost:3000/search"
+        let bloodGroup =  self.bloodGroupTextField.text! as String
         let query = ["bg": bloodGroup]
+        
         Alamofire.request(.GET, url, parameters: query).responseJSON { (response) -> Void in
-            if let JSON = response.result.value {
-                print(JSON)
+            if let JSON = response.result.value as? NSDictionary {
+                let data = JSON["data"]! as! NSArray
+                
+                for userData in data {
+                    var user = User()
+                    user.fullName = userData["fullName"] as? String
+                    user.bloodGroup = userData["bloodGroup"] as? String
+                    self.users.append(user)
+                }
+                // perform segue
+                self.performSegueWithIdentifier("segueFromSearchToSearchResults", sender: self)
             }
         }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segueFromSearchToSearchResults" {
             let vc = segue.destinationViewController as! SearchResultsViewController
-            
+            vc.users = self.users
         }
     }
     

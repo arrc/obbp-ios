@@ -11,9 +11,9 @@ import UIKit
 class ResultsTableViewCell: UITableViewCell {
     
     // Outlets
-    @IBOutlet weak var fullNameLabel: UIView!
-    @IBOutlet weak var bloodGroup: UIView!
-    
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var bloodGroupLabel: UILabel!
+
     // Properties
     var user: User? = nil
 

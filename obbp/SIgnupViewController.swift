@@ -31,6 +31,7 @@ class SIgnupViewController: UITableViewController {
     
     // Properties
     var data : [String: AnyObject] = [String: AnyObject]()
+    var user : User = User()
     
     // Initial
     override func viewDidLoad() {
@@ -74,18 +75,8 @@ class SIgnupViewController: UITableViewController {
     
     // Done
     @IBAction func donePressed(sender: UIBarButtonItem) {
-        data["firstName"] = self.firstNameTextField.text! as String
-        data["lastName"] = self.lastNameTextField.text! as String
-        data["username"] = self.usernameTextField.text! as String
-        
-        guard let email = self.emailTextField.text else {
-            print("error no email")
-            return
-        }
-        
-        self.data["email"] = email
-        
-        print(data)
+        user.firstName = self.firstNameTextField.text! as String
+        print(user)
     }
     
     // Cancel

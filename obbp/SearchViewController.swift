@@ -40,7 +40,6 @@ class SearchViewController: UIViewController {
             
             print("value = \(value)")
             print("index = \(index)")
-            print("picker = \(picker)")
             self.bloodGroupTextField.text = index as? String
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
@@ -54,7 +53,6 @@ class SearchViewController: UIViewController {
             
             print("value = \(value)")
             print("index = \(index)")
-            print("picker = \(picker)")
             self.stateTextField.text = index as? String
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
@@ -63,13 +61,19 @@ class SearchViewController: UIViewController {
     
     @IBAction func serachPressed(sender: UIButton) {
         let bloodGroup = self.bloodGroupTextField.text!
-        var url: String = "http://localhost:3000/search"
-        url += "?bg=\(bloodGroup)"
-        print(url)
-        Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+        let url: String = "http://localhost:3000/search"
+        let query = ["bg": bloodGroup]
+        Alamofire.request(.GET, url, parameters: query).responseJSON { (response) -> Void in
             if let JSON = response.result.value {
                 print(JSON)
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueFromSearchToSearchResults" {
+            let vc = segue.destinationViewController as! SearchResultsViewController
+            
         }
     }
     

@@ -804,10 +804,10 @@
             </objects>
             <point key="canvasLocation" x="828" y="-342"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Results View Controller-->
         <scene sceneID="Vq7-fc-eCr">
             <objects>
-                <viewController storyboardIdentifier="SearchDetailView" id="0pX-jg-VKP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchDetailView" id="0pX-jg-VKP" customClass="SearchResultsViewController" customModule="obbp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IRy-Lg-iob"/>
                         <viewControllerLayoutGuide type="bottom" id="3kc-rW-CLJ"/>
@@ -820,7 +820,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchResults" rowHeight="64" id="r67-MA-Jgj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchResults" rowHeight="64" id="r67-MA-Jgj" customClass="ResultsTableViewCell" customModule="obbp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r67-MA-Jgj" id="Li4-0R-Y7Y">
@@ -841,6 +841,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bloodGroup" destination="Li4-0R-Y7Y" id="Khe-4u-sBI"/>
+                                            <outlet property="fullNameLabel" destination="Li4-0R-Y7Y" id="4Ur-TT-t27"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -859,10 +863,10 @@
             </objects>
             <point key="canvasLocation" x="1239" y="-342"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Results Detail View Controller-->
         <scene sceneID="aHB-GE-91v">
             <objects>
-                <viewController id="DIw-oi-yyL" sceneMemberID="viewController">
+                <viewController id="DIw-oi-yyL" customClass="SearchResultsDetailViewController" customModule="obbp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cxn-TG-cvU"/>
                         <viewControllerLayoutGuide type="bottom" id="Qfm-xL-zhx"/>
@@ -1028,7 +1032,6 @@
         <!--Navigation Controller-->
         <scene sceneID="K3D-UT-SxT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qG5-9s-Pyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S6W-Qj-Heh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RV8-b9-LUW">
@@ -1040,8 +1043,91 @@
                         <segue destination="fxf-mE-yqM" kind="relationship" relationship="rootViewController" id="Gp5-eo-gLr"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qG5-9s-Pyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-573" y="325"/>
+        </scene>
+        <!--Sandbox-->
+        <scene sceneID="A1h-zP-mxg">
+            <objects>
+                <viewController title="Sandbox" id="uka-19-NGs" userLabel="Sandbox" customClass="SandboxViewController" customModule="obbp" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u3A-tp-Avu"/>
+                        <viewControllerLayoutGuide type="bottom" id="R1P-LR-syY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dej-FE-uPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sandbox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1H-jO-GBk">
+                                <rect key="frame" x="142" y="28" width="90" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="test" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egF-a9-1Dn">
+                                <rect key="frame" x="20" y="74" width="190" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="testPicker:" destination="uka-19-NGs" eventType="touchDown" id="MT9-jw-CWW"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-HY-vl2">
+                                <rect key="frame" x="235" y="74" width="69" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="uka-19-NGs" eventType="touchUpInside" id="jk8-bW-rl7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-ma-ogH">
+                                <rect key="frame" x="20" y="117" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUp-Vv-xUa">
+                                <rect key="frame" x="157" y="117" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jY7-L6-68C">
+                                <rect key="frame" x="20" y="155" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-42-bUa">
+                                <rect key="frame" x="157" y="155" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lY1-DQ-Ab4">
+                                <rect key="frame" x="104" y="251" width="73" height="30"/>
+                                <state key="normal" title="done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="uka-19-NGs" eventType="touchUpInside" id="xPn-ed-fjt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvO-0F-bLc">
+                                <rect key="frame" x="20" y="193" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="email" destination="jY7-L6-68C" id="Ofr-Vj-0Vv"/>
+                        <outlet property="fname" destination="fEn-ma-ogH" id="V43-kN-qko"/>
+                        <outlet property="lname" destination="bUp-Vv-xUa" id="w0p-nO-8xD"/>
+                        <outlet property="password" destination="cvO-0F-bLc" id="fe8-uf-3b1"/>
+                        <outlet property="state" destination="UU5-42-bUa" id="CTh-oL-LLv"/>
+                        <outlet property="testTestField" destination="egF-a9-1Dn" id="a8j-rv-kBo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nEk-89-9u4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-854.5" y="1196.5"/>
         </scene>
         <!--Blood Request-->
         <scene sceneID="aRg-BL-GX8">

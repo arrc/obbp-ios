@@ -804,7 +804,7 @@
             </objects>
             <point key="canvasLocation" x="828" y="-342"/>
         </scene>
-        <!--Search Results View Controller-->
+        <!--Search results-->
         <scene sceneID="Vq7-fc-eCr">
             <objects>
                 <viewController storyboardIdentifier="SearchDetailView" id="0pX-jg-VKP" customClass="SearchResultsViewController" customModule="obbp" customModuleProvider="target" sceneMemberID="viewController">
@@ -865,7 +865,7 @@
                                     <outlet property="delegate" destination="0pX-jg-VKP" id="4Bj-83-c2W"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-fC-lNB">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-fC-lNB">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Search results" id="rFJ-FE-eo0"/>
@@ -874,6 +874,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Search results" id="X1c-xC-P2a"/>
                     <connections>
                         <outlet property="resultsTableView" destination="f2z-mX-5zy" id="I1j-bF-rh7"/>
                         <segue destination="DIw-oi-yyL" kind="show" identifier="segueFromSearchResultsToDetail" id="OAb-2V-zXY"/>
@@ -883,7 +884,7 @@
             </objects>
             <point key="canvasLocation" x="1239" y="-342"/>
         </scene>
-        <!--Search Results Detail View Controller-->
+        <!--User details-->
         <scene sceneID="aHB-GE-91v">
             <objects>
                 <viewController id="DIw-oi-yyL" customClass="SearchResultsDetailViewController" customModule="obbp" customModuleProvider="target" sceneMemberID="viewController">
@@ -896,7 +897,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UED-os-2hm">
-                                <rect key="frame" x="74" y="132" width="173" height="21"/>
+                                <rect key="frame" x="74" y="104" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blood Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOu-2d-4if">
+                                <rect key="frame" x="74" y="152" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq5-nC-ESz">
+                                <rect key="frame" x="84" y="276" width="153" height="30"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="send message">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessagePressed:" destination="DIw-oi-yyL" eventType="touchUpInside" id="oeu-S5-NZq"/>
+                                    <segue destination="TeC-5E-Tav" kind="popoverPresentation" identifier="segueSendMessage" popoverAnchorView="qq5-nC-ESz" id="G2w-FU-WK8">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-nj-KLU">
+                                <rect key="frame" x="74" y="195" width="173" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -904,10 +930,60 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="User details" id="5Gq-TL-OSy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Ss6-tQ-W8G">
+                            <connections>
+                                <action selector="cancelPressed:" destination="DIw-oi-yyL" id="3iG-z0-TP5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bloodGroupLabel" destination="hOu-2d-4if" id="lmf-dY-RPD"/>
+                        <outlet property="fullNameLabel" destination="UED-os-2hm" id="TXc-ix-RMI"/>
+                        <outlet property="stateLabel" destination="Rlf-nj-KLU" id="17e-e5-fEF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJr-L6-LOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1678" y="-342"/>
+        </scene>
+        <!--Search Result Message View Controller-->
+        <scene sceneID="7Ez-qt-eWh">
+            <objects>
+                <viewController id="TeC-5E-Tav" customClass="SearchResultMessageViewController" customModule="obbp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ef6-cF-gao"/>
+                        <viewControllerLayoutGuide type="bottom" id="arY-2x-m80"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fio-Fx-wfR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="fdasfsafs" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-Dn-PE9">
+                                <rect key="frame" x="40" y="70" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.42999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-my-vsG">
+                                <rect key="frame" x="106" y="251" width="109" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendMessagePressed:" destination="TeC-5E-Tav" eventType="touchUpInside" id="5Va-pI-zo7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="messageTextView" destination="Cde-Dn-PE9" id="sBt-bw-vbC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzX-uO-M1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2116" y="-342"/>
         </scene>
         <!--Blood request-->
         <scene sceneID="XxO-4x-1BF">

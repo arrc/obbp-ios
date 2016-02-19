@@ -16,12 +16,11 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     // Properties
     var users : [User]? = nil
+    var selectedRow: User? = nil
     
     // Init
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(users!)
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,10 +44,25 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.resultsTableView.dequeueReusableCellWithIdentifier("searchResults", forIndexPath: indexPath) as! ResultsTableViewCell
-        let user = users![indexPath.row]
+        let user = self.users![indexPath.row]
         cell.fullNameLabel.text = user.fullName
-        
+        cell.bloodGroupLabel.text = user.bloodGroup
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedRow = self.users![indexPath.row]
+        performSegueWithIdentifier("segueFromSearchResultsToDetail", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueFromSearchResultsToDetail" {
+            let vc = segue.destinationViewController as! SearchResultsDetailViewController
+            vc.user = self.selectedRow
+        }
+        
+    }
+    
+    
 
 }

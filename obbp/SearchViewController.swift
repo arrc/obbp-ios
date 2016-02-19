@@ -67,8 +67,10 @@ class SearchViewController: UIViewController {
                 
                 for userData in data {
                     var user = User()
+                    user.id = userData["_id"] as? String
                     user.fullName = userData["fullName"] as? String
                     user.bloodGroup = userData["bloodGroup"] as? String
+                    user.state = userData["state"] as? String
                     self.users.append(user)
                 }
                 // perform segue

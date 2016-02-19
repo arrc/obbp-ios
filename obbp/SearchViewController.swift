@@ -37,9 +37,6 @@ class SearchViewController: UIViewController {
     @IBAction func bloodGroupPicker(sender: UITextField) {
         ActionSheetStringPicker.showPickerWithTitle("Blood group", rows: ["A+", "A-", "B+", "B-", "O+", "O-"], initialSelection: 1, doneBlock: {
             picker, value, index in
-            
-            print("value = \(value)")
-            print("index = \(index)")
             self.bloodGroupTextField.text = index as? String
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)

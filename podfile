@@ -13,4 +13,8 @@ target 'obbp' do
     pod 'XLForm', '~> 3.0.2'
     pod 'ActionSheetPicker-3.0', '~> 1.3.4'
     pod 'SwiftValidator', '3.0.3'
+    pod 'PSTAlertController', '1.2.0'
+    pod 'CustomIOSAlertView', '~> 0.9.3'
+    pod 'RMUniversalAlert', '~> 0.7'
+    pod 'Moya', '~> 6.1.3'
 end

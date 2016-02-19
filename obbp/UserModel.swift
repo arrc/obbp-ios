@@ -27,9 +27,6 @@ struct User {
     func params() -> [String: AnyObject] {
         var data = [String: AnyObject]()
         
-        if let fullName = self.fullName {
-            data["fullName"] = fullName
-        }
         
         if let firstName = self.firstName {
             data["firstName"] = firstName

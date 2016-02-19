@@ -87,5 +87,13 @@ class SearchViewController: UIViewController {
         }
     }
     
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "segueFromSearchToSearchResults" {
+//            let navigationController = segue.destinationViewController as! UINavigationController
+//            let controller = navigationController.topViewController as! SearchResultsViewController
+//            controller.users = self.users
+//        }
+//    }
+    
     
 }

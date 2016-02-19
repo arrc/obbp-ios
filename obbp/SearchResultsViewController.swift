@@ -35,8 +35,8 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.users!.count > 0 {
-           return self.users!.count
+        if let user = self.users {
+           return user.count
         } else {
             return 0
         }

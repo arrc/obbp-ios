@@ -49,9 +49,6 @@ class SearchResultsDetailViewController: UIViewController {
         performSegueWithIdentifier("segueSendMessage", sender: self)
     }
     
-    @IBAction func cancelPressed(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let vm = segue.destinationViewController as! SearchResultMessageViewController

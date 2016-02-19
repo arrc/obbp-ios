@@ -788,6 +788,7 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="serachPressed:" destination="Ns1-5f-y7J" eventType="touchUpInside" id="Hb0-uE-Scz"/>
+                                    <segue destination="0pX-jg-VKP" kind="show" identifier="segueFromSearchToSearchResults" id="23c-J9-chx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -797,14 +798,13 @@
                     <connections>
                         <outlet property="bloodGroupTextField" destination="KLU-2C-QLe" id="2vO-0o-qwn"/>
                         <outlet property="stateTextField" destination="5PY-3R-L9P" id="OaY-k2-wB2"/>
-                        <segue destination="0pX-jg-VKP" kind="show" identifier="segueFromSearchToSearchResults" action="showDetailViewController:sender:" id="EOW-Pf-kgI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGl-52-igE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828" y="-342"/>
         </scene>
-        <!--Search results-->
+        <!--Search Results View Controller-->
         <scene sceneID="Vq7-fc-eCr">
             <objects>
                 <viewController storyboardIdentifier="SearchDetailView" id="0pX-jg-VKP" customClass="SearchResultsViewController" customModule="obbp" customModuleProvider="target" sceneMemberID="viewController">
@@ -817,7 +817,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-mX-5zy">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchResults" rowHeight="64" id="r67-MA-Jgj" customClass="ResultsTableViewCell" customModule="obbp" customModuleProvider="target">
@@ -874,7 +874,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search results" id="X1c-xC-P2a"/>
+                    <navigationItem key="navigationItem" id="X1c-xC-P2a"/>
                     <connections>
                         <outlet property="resultsTableView" destination="f2z-mX-5zy" id="I1j-bF-rh7"/>
                         <segue destination="DIw-oi-yyL" kind="show" identifier="segueFromSearchResultsToDetail" id="OAb-2V-zXY"/>
@@ -930,13 +930,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="User details" id="5Gq-TL-OSy">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Ss6-tQ-W8G">
-                            <connections>
-                                <action selector="cancelPressed:" destination="DIw-oi-yyL" id="3iG-z0-TP5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="User details" id="5Gq-TL-OSy"/>
                     <connections>
                         <outlet property="bloodGroupLabel" destination="hOu-2d-4if" id="lmf-dY-RPD"/>
                         <outlet property="fullNameLabel" destination="UED-os-2hm" id="TXc-ix-RMI"/>

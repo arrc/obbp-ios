@@ -8,7 +8,15 @@
 
 import Foundation
 
-struct User {
+//class Users {
+//    var allUsers: [User] = [] {
+//        didSet {
+//            print("users did set", allUsers)
+//        }
+//    }
+//}
+
+class User {
     var id: String?
     var fullName: String?
     var firstName: String?

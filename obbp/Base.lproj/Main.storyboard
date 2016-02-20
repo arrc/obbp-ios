@@ -787,7 +787,7 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <action selector="serachPressed:" destination="Ns1-5f-y7J" eventType="touchUpInside" id="Hb0-uE-Scz"/>
+                                    <action selector="searchPressed:" destination="Ns1-5f-y7J" eventType="touchUpInside" id="Yhi-DS-UJJ"/>
                                     <segue destination="0pX-jg-VKP" kind="show" identifier="segueFromSearchToSearchResults" id="23c-J9-chx"/>
                                 </connections>
                             </button>

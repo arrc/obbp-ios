@@ -17,14 +17,21 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     // Properties
     var users : [User]? = nil
     var selectedRow: User? = nil
+
     
     // Init
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("view did load")
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        print("view appeared", users)
+        self.resultsTableView.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        print("view will layout subview", users)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +59,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedRow = self.users![indexPath.row]
+        self.resultsTableView.deselectRowAtIndexPath(indexPath, animated: true)
         performSegueWithIdentifier("segueFromSearchResultsToDetail", sender: self)
     }
     

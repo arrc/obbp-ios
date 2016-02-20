@@ -19,6 +19,7 @@ class SearchViewController: UIViewController {
     
     // Properties
     var users = [User]()
+    var performSegue = false
     
     // Init
     override func viewDidLoad() {
@@ -56,25 +57,31 @@ class SearchViewController: UIViewController {
     }
     
     
-    @IBAction func serachPressed(sender: UIButton) {
+    @IBAction func searchPressed(sender: UIButton) {
         let url: String = "http://localhost:3000/search"
         let bloodGroup =  self.bloodGroupTextField.text! as String
         let query = ["bg": bloodGroup]
+        
+        // empty array
+        self.users.removeAll(keepCapacity: false)
         
         Alamofire.request(.GET, url, parameters: query).responseJSON { (response) -> Void in
             if let JSON = response.result.value as? NSDictionary {
                 let data = JSON["data"]! as! NSArray
                 
                 for userData in data {
-                    var user = User()
+                    let user = User()
                     user.id = userData["_id"] as? String
                     user.fullName = userData["fullName"] as? String
                     user.bloodGroup = userData["bloodGroup"] as? String
                     user.state = userData["state"] as? String
                     self.users.append(user)
                 }
+                
                 // perform segue
+                self.performSegue = true
                 self.performSegueWithIdentifier("segueFromSearchToSearchResults", sender: self)
+//                self.shouldPerformSegueWithIdentifier("segueFromSearchToSearchResults", sender: self)
             }
         }
         
@@ -84,8 +91,20 @@ class SearchViewController: UIViewController {
         if segue.identifier == "segueFromSearchToSearchResults" {
             let vc = segue.destinationViewController as! SearchResultsViewController
             vc.users = self.users
+            
         }
     }
+    
+//    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+//        if identifier == "segueFromSearchToSearchResults" {
+//            if !performSegue { // dont run
+//                return false
+//            } else { // run
+//                return true
+//            }
+//        }
+//        return true
+//    }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        if segue.identifier == "segueFromSearchToSearchResults" {
@@ -94,6 +113,7 @@ class SearchViewController: UIViewController {
 //            controller.users = self.users
 //        }
 //    }
+
     
     
 }

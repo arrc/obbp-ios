@@ -655,7 +655,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="3mC-J9-04Z">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bNG-J9-3Pv" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarView" automaticallyAdjustsScrollViewInsets="NO" id="bNG-J9-3Pv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4lY-ji-Owx">
@@ -788,7 +788,6 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchPressed:" destination="Ns1-5f-y7J" eventType="touchUpInside" id="Yhi-DS-UJJ"/>
-                                    <segue destination="0pX-jg-VKP" kind="show" identifier="segueFromSearchToSearchResults" id="23c-J9-chx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -798,6 +797,7 @@
                     <connections>
                         <outlet property="bloodGroupTextField" destination="KLU-2C-QLe" id="2vO-0o-qwn"/>
                         <outlet property="stateTextField" destination="5PY-3R-L9P" id="OaY-k2-wB2"/>
+                        <segue destination="0pX-jg-VKP" kind="show" identifier="segueFromSearchToSearchResults" id="1QX-vs-cuA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGl-52-igE" userLabel="First Responder" sceneMemberID="firstResponder"/>

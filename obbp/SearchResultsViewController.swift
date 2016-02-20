@@ -22,16 +22,10 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     // Init
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view did load")
     }
     
     override func viewWillAppear(animated: Bool) {
-        print("view appeared", users)
         self.resultsTableView.reloadData()
-    }
-    
-    override func viewWillLayoutSubviews() {
-        print("view will layout subview", users)
     }
 
     override func didReceiveMemoryWarning() {

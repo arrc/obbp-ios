@@ -57,15 +57,30 @@ class RequestViewController: UITableViewController {
             self.payload["state"] = self.stateTextField.text!
         }
         
-        print(payload)
         
         let dict = Locksmith.loadDataForUserAccount("userSession")!
         let headers = [
             "Authorization": "Bearer \(dict["token"]!)"
         ]
-        Alamofire.request(.POST, "http://localhost:3000/api/requests", parameters: payload ,headers: headers).responseJSON { response in
-            if let JSON = response.result.value {
-                print(JSON)
+        Alamofire.request(.POST, "http://localhost:4000/api/requests", parameters: payload ,headers: headers).responseJSON { response in
+            if let _ = response.result.value {
+                // clear fields
+                self.bloodGroupTextField.text = ""
+                self.stateTextField.text = ""
+                self.hospitalTextField.text = ""
+                self.purposeTextField.text = ""
+                self.messageTextView.text = ""
+                
+                // alert
+                let alertController = UIAlertController(title: "Success", message: "Your request has been sent successfully.", preferredStyle: UIAlertControllerStyle.Alert)
+                let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+                alertController.addAction(alertAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            } else {
+                let alertController = UIAlertController(title: "Sorry", message: "Failed to send request.", preferredStyle: UIAlertControllerStyle.Alert)
+                let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+                alertController.addAction(alertAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
         }
         

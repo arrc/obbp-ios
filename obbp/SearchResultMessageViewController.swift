@@ -46,7 +46,7 @@ class SearchResultMessageViewController: UIViewController {
             payload["message"] = message
         }
         
-        Alamofire.request(.POST, "http://localhost:3000/api/message", parameters: payload ,headers: headers).responseJSON { response in
+        Alamofire.request(.POST, "http://localhost:4000/api/message", parameters: payload ,headers: headers).responseJSON { response in
             if let JSON = response.result.value {
                 print(JSON)
                 self.dismissViewControllerAnimated(true, completion: nil)

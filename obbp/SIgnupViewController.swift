@@ -131,7 +131,7 @@ class SIgnupViewController: UITableViewController {
         let params = user.params()
         print(params)
         
-        //makeSignupRequest(params)
+        makeSignupRequest(params)
 
     }
     
@@ -141,12 +141,13 @@ class SIgnupViewController: UITableViewController {
     }
     
     func makeSignupRequest(params : [String: AnyObject]){
-        let url: String = "http://localhost:3000/signup"
+        let url: String = "http://localhost:4000/signup"
         
         
         Alamofire.request(.POST, url, parameters: params).responseJSON { (response) -> Void in
             if let JSON = response.result.value as? NSDictionary {
                 print(JSON)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
     }

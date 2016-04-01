@@ -32,8 +32,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
-        let parameters = ["username": "admin", "password": "admin"]
-        Alamofire.request(.POST, "http://localhost:3000/login", parameters: parameters).responseJSON { response in
+        let parameters = ["username": self.usernameTextField.text!, "password": self.passwordTextField.text!]
+        Alamofire.request(.POST, "http://localhost:4000/login", parameters: parameters).responseJSON { response in
+            print(response)
             if let JSON = response.result.value {
                 let token = JSON["token"] as! String
                 let user = JSON["user"] as! NSDictionary
@@ -55,7 +56,7 @@ class LoginViewController: UIViewController {
             "Authorization": "Bearer \(dict["token"]!)"
         ]
         print(headers)
-        Alamofire.request(.GET, "http://localhost:3000/api/profile", headers: headers).responseJSON { response in
+        Alamofire.request(.GET, "http://localhost:4000/api/profile", headers: headers).responseJSON { response in
             if let JSON = response.result.value {
                 print(JSON)
             }

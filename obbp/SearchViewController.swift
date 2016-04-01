@@ -58,7 +58,7 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func searchPressed(sender: UIButton) {
-        let url: String = "http://localhost:3000/search"
+        let url: String = "http://localhost:4000/search"
         let bloodGroup =  self.bloodGroupTextField.text! as String
         let query = ["bg": bloodGroup]
         

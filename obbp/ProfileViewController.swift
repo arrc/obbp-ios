@@ -14,6 +14,8 @@ class ProfileViewController: UIViewController {
     // Outlets
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var bloodGroupAndLocationLabel: UILabel!
     
     // Properties
 
@@ -24,8 +26,13 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         let session = Locksmith.loadDataForUserAccount("userSession")
         let user = session!["user"] as! NSDictionary
+        
+        let bloodGroupAndLocationDetail: String = "\(user["bloodGroup"]!), \(user["state"]!)"
+        
         usernameLabel.text = user["username"] as? String
         fullNameLabel.text = user["fullName"] as? String
+        bloodGroupAndLocationLabel.text = bloodGroupAndLocationDetail
+        profileImageView.image = UIImage(named: "user.jpg")
         
     }
 

@@ -13,6 +13,9 @@
 		901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */; };
 		903542EB1C74F54E00494AC0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903542EA1C74F54D00494AC0 /* UserModel.swift */; };
 		906829621C70875C00C39C82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346C01C7024B100426287 /* SearchViewController.swift */; };
+		9070BF681CAEEA9C00043733 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF671CAEEA9C00043733 /* UserService.swift */; };
+		9070BF6A1CAEF92D00043733 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF691CAEF92D00043733 /* NetworkManager.swift */; };
+		9070BF6C1CAF002B00043733 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF6B1CAF002B00043733 /* SearchService.swift */; };
 		907986381C6F9A2100E97084 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907986371C6F9A2100E97084 /* Session.swift */; };
 		908346BF1C70246700426287 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346BE1C70246700426287 /* RequestViewController.swift */; };
 		90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B339781C6FBC620095B2B4 /* ProfileViewController.swift */; };
@@ -36,6 +39,9 @@
 		901A4B991C6F1011004699FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIgnupViewController.swift; sourceTree = "<group>"; };
 		903542EA1C74F54D00494AC0 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9070BF671CAEEA9C00043733 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		9070BF691CAEF92D00043733 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9070BF6B1CAF002B00043733 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		907986371C6F9A2100E97084 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		908346BE1C70246700426287 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		908346C01C7024B100426287 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 				90BAD1301C6E2D0300D1DCDA /* Info.plist */,
 				907986371C6F9A2100E97084 /* Session.swift */,
 				90E9E6C11C756AB90041FA89 /* sandbox */,
+				9070BF671CAEEA9C00043733 /* UserService.swift */,
+				9070BF691CAEF92D00043733 /* NetworkManager.swift */,
 			);
 			path = obbp;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 				90E9E6C61C75A0FA0041FA89 /* SearchResultsDetailViewController.swift */,
 				90144E2A1C776840008D785C /* SearchResultMessageViewController.swift */,
 				90E9E6C91C75A2360041FA89 /* ResultsTableViewCell.swift */,
+				9070BF6B1CAF002B00043733 /* SearchService.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -271,6 +280,8 @@
 				90144E2B1C776840008D785C /* SearchResultMessageViewController.swift in Sources */,
 				906829621C70875C00C39C82 /* SearchViewController.swift in Sources */,
 				90E9E6CA1C75A2360041FA89 /* ResultsTableViewCell.swift in Sources */,
+				9070BF6A1CAEF92D00043733 /* NetworkManager.swift in Sources */,
+				9070BF6C1CAF002B00043733 /* SearchService.swift in Sources */,
 				90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */,
 				907986381C6F9A2100E97084 /* Session.swift in Sources */,
 				90E9E6C51C75A0E00041FA89 /* SearchResultsViewController.swift in Sources */,
@@ -278,6 +289,7 @@
 				901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */,
 				90BAD1271C6E2D0300D1DCDA /* HomeViewController.swift in Sources */,
 				901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */,
+				9070BF681CAEEA9C00043733 /* UserService.swift in Sources */,
 				903542EB1C74F54E00494AC0 /* UserModel.swift in Sources */,
 				90E9E6C31C756AD50041FA89 /* SandboxViewController.swift in Sources */,
 				90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */,

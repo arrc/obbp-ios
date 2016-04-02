@@ -32,11 +32,6 @@ class SearchResultMessageViewController: UIViewController {
     
     
     @IBAction func sendMessagePressed(sender: UIButton) {
-        print(self.messageTextView.text)
-        let dict = Locksmith.loadDataForUserAccount("userSession")!
-        let headers = [
-            "Authorization": "Bearer \(dict["token"]!)"
-        ]
         
         if let id = self.id {
             payload["receiver"] = id
@@ -46,11 +41,9 @@ class SearchResultMessageViewController: UIViewController {
             payload["message"] = message
         }
         
-        Alamofire.request(.POST, "http://localhost:4000/api/message", parameters: payload ,headers: headers).responseJSON { response in
-            if let JSON = response.result.value {
-                print(JSON)
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }
+        NetworkManager.shared.request(.POST, endpoint: "/api/message", params: payload) { (result, error) -> Void in
+            print(result!)
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
         
     }

@@ -24,14 +24,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMY-Kf-R0s">
-                                <rect key="frame" x="20" y="384" width="280" height="30"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.22" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="didPressLogoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IVZ-4O-rYP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No upcoming camps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poe-4B-94s">
                                 <rect key="frame" x="40" y="202" width="241" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -719,6 +711,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eNw-y7-9Xj">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5qc-Se-6Z6"/>
                     </connections>
@@ -774,6 +771,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="ULT-7O-SaV">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="BOH-A0-RnB">
+                            <connections>
+                                <action selector="didPressLogoutButton:" destination="gxX-ad-7ZQ" id="OUN-SW-PZW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="m9N-G7-Pr1">
                             <connections>
                                 <segue destination="T8h-4m-lkc" kind="show" id="RZI-kz-cCb"/>
@@ -1188,7 +1190,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbQ-u1-W44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="376" y="1002"/>
+            <point key="canvasLocation" x="468" y="1062"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K3D-UT-SxT">

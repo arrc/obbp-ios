@@ -16,7 +16,7 @@ import Foundation
 //    }
 //}
 
-class User {
+struct User {
     var id: String?
     var fullName: String?
     var firstName: String?

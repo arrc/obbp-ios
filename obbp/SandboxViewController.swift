@@ -68,14 +68,12 @@ class SandboxViewController: UIViewController {
     
     func searchRequest() {
         let bloodGroup = self.testTestField.text!
-        let url : String = "http://localhost:3000/search"
         var term = [String: String]()
         term["bg"] = bloodGroup
         
-        Alamofire.request(.GET, url, parameters: term).responseJSON { (response) -> Void in
-            if let JSON = response.result.value {
-                print(JSON)
-            }
+        NetworkManager.shared.request(.GET, endpoint: "/search", params: term) { (result, error) -> Void in
+            guard error == nil else { print(error!); return }
+            print(result)
         }
         
     }

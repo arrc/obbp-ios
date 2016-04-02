@@ -19,10 +19,11 @@ class SearchResultMessageViewController: UIViewController {
     var id : String? = nil
     var payload = [String: AnyObject]()
     
+    // Objects
+    let search = SearchService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,11 +42,10 @@ class SearchResultMessageViewController: UIViewController {
             payload["message"] = message
         }
         
-        NetworkManager.shared.request(.POST, endpoint: "/api/message", params: payload) { (result, error) -> Void in
+        search.sendMessage(payload) { (result, error) -> Void in // TODO: Error handling
             print(result!)
             self.dismissViewControllerAnimated(true, completion: nil)
         }
-        
     }
 
 }

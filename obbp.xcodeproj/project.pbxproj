@@ -16,6 +16,10 @@
 		9070BF681CAEEA9C00043733 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF671CAEEA9C00043733 /* UserService.swift */; };
 		9070BF6A1CAEF92D00043733 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF691CAEF92D00043733 /* NetworkManager.swift */; };
 		9070BF6C1CAF002B00043733 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF6B1CAF002B00043733 /* SearchService.swift */; };
+		9070BF6E1CAFE95F00043733 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF6D1CAFE95F00043733 /* MessageTableViewCell.swift */; };
+		9070BF711CAFE9B900043733 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF701CAFE9B900043733 /* ProfileService.swift */; };
+		9070BF731CAFEBC300043733 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF721CAFEBC300043733 /* Message.swift */; };
+		9070BF751CAFEC4700043733 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF741CAFEC4700043733 /* MessageService.swift */; };
 		907986381C6F9A2100E97084 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907986371C6F9A2100E97084 /* Session.swift */; };
 		908346BF1C70246700426287 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346BE1C70246700426287 /* RequestViewController.swift */; };
 		90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B339781C6FBC620095B2B4 /* ProfileViewController.swift */; };
@@ -42,6 +46,10 @@
 		9070BF671CAEEA9C00043733 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9070BF691CAEF92D00043733 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9070BF6B1CAF002B00043733 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		9070BF6D1CAFE95F00043733 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		9070BF701CAFE9B900043733 /* ProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		9070BF721CAFEBC300043733 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9070BF741CAFEC4700043733 /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		907986371C6F9A2100E97084 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		908346BE1C70246700426287 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		908346C01C7024B100426287 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +89,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9070BF6F1CAFE97F00043733 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				90B339781C6FBC620095B2B4 /* ProfileViewController.swift */,
+				9070BF6D1CAFE95F00043733 /* MessageTableViewCell.swift */,
+				9070BF701CAFE9B900043733 /* ProfileService.swift */,
+				9070BF721CAFEBC300043733 /* Message.swift */,
+				9070BF741CAFEC4700043733 /* MessageService.swift */,
+			);
+			name = profile;
+			sourceTree = "<group>";
+		};
 		90BAD1181C6E2D0200D1DCDA = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +127,7 @@
 				90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */,
 				901A4B991C6F1011004699FE /* LoginViewController.swift */,
 				901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */,
-				90B339781C6FBC620095B2B4 /* ProfileViewController.swift */,
+				9070BF6F1CAFE97F00043733 /* profile */,
 				908346BE1C70246700426287 /* RequestViewController.swift */,
 				90E9E6C81C75A10A0041FA89 /* Search */,
 				90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */,
@@ -283,14 +303,18 @@
 				9070BF6A1CAEF92D00043733 /* NetworkManager.swift in Sources */,
 				9070BF6C1CAF002B00043733 /* SearchService.swift in Sources */,
 				90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */,
+				9070BF751CAFEC4700043733 /* MessageService.swift in Sources */,
 				907986381C6F9A2100E97084 /* Session.swift in Sources */,
 				90E9E6C51C75A0E00041FA89 /* SearchResultsViewController.swift in Sources */,
 				908346BF1C70246700426287 /* RequestViewController.swift in Sources */,
 				901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */,
+				9070BF6E1CAFE95F00043733 /* MessageTableViewCell.swift in Sources */,
 				90BAD1271C6E2D0300D1DCDA /* HomeViewController.swift in Sources */,
 				901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */,
+				9070BF711CAFE9B900043733 /* ProfileService.swift in Sources */,
 				9070BF681CAEEA9C00043733 /* UserService.swift in Sources */,
 				903542EB1C74F54E00494AC0 /* UserModel.swift in Sources */,
+				9070BF731CAFEBC300043733 /* Message.swift in Sources */,
 				90E9E6C31C756AD50041FA89 /* SandboxViewController.swift in Sources */,
 				90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */,
 			);

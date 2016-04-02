@@ -9,15 +9,21 @@
 import UIKit
 import Locksmith
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Outlets
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var bloodGroupAndLocationLabel: UILabel!
+    @IBOutlet weak var tblView: UITableView!
     
     // Properties
+    var messages: [Message] = [Message]()
+    
+    // Objects
+    let profileService = ProfileService()
+    let messageService = MessageService()
 
     // Init
     override func viewDidLoad() {
@@ -33,6 +39,15 @@ class ProfileViewController: UIViewController {
         fullNameLabel.text = user["fullName"] as? String
         bloodGroupAndLocationLabel.text = bloodGroupAndLocationDetail
         profileImageView.image = UIImage(named: "user.jpg")
+        
+        messageService.fetchMessages { (messages, error) -> Void in
+            guard error == nil else { print(error!); return }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.messages = messages!
+                self.tblView.reloadData()
+            })
+        }
         
     }
 
@@ -52,6 +67,26 @@ class ProfileViewController: UIViewController {
             })
         }
 
+    }
+    
+    // MARK:- table view
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.tblView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! MessageTableViewCell
+        let message = self.messages[indexPath.row]
+        print(message)
+        cell.messageLabel.text = message.message
+        cell.senderLabel.text = message.sender
+//        cell.dateLabel.text = message.date
+        
+        return cell
     }
     
 }

@@ -32,4 +32,15 @@ class SearchService {
             callback(users: users, error: nil)
         }
     }
+    
+    func sendMessage(payload: [String: AnyObject], callback: (result: NSDictionary?, error: String? ) -> Void) {
+        NetworkManager.shared.request(.POST, endpoint: "/api/message", params: payload) { (result, error) -> Void in
+            guard error == nil else {
+                callback(result: nil, error: "Error: \(error)")
+                return
+            }
+            
+            callback(result: result, error: nil)
+        }
+    }
 }

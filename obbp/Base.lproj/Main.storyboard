@@ -814,7 +814,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="m9N-G7-Pr1">
                             <connections>
-                                <segue destination="mKp-49-KxH" kind="show" id="IOo-Rl-5cQ"/>
+                                <segue destination="mKp-49-KxH" kind="show" identifier="fromProfileViewToProfileEditView" id="IOo-Rl-5cQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -882,6 +882,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWo-Zs-qnf">
                                                     <rect key="frame" x="8" y="7" width="304" height="30"/>
                                                     <state key="normal" title="Change password"/>
+                                                    <connections>
+                                                        <action selector="changePasswordPressed:" destination="mKp-49-KxH" eventType="touchUpInside" id="NfF-OY-ouH"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -961,6 +964,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRC-5L-puB">
                                                     <rect key="frame" x="8" y="8" width="304" height="30"/>
                                                     <state key="normal" title="Update Profile"/>
+                                                    <connections>
+                                                        <action selector="updateProfilePressed:" destination="mKp-49-KxH" eventType="touchUpInside" id="PIZ-P8-4Yf"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -976,6 +982,14 @@
                     <navigationItem key="navigationItem" title="Edit profile" id="nTY-xq-N5b"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="700"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="gNt-nM-jZI" id="NsM-QN-cGh"/>
+                        <outlet property="mobileTextField" destination="9ve-RX-hVS" id="miR-V0-hRZ"/>
+                        <outlet property="newPasswordTextField" destination="ppL-85-VaY" id="vqm-hl-QjG"/>
+                        <outlet property="oldPasswordTextField" destination="5O0-BW-rHZ" id="MBL-9s-Gvb"/>
+                        <outlet property="pincodeTextField" destination="ZSE-yJ-T5A" id="lsx-Dq-V6Y"/>
+                        <outlet property="stateTextField" destination="Yx6-Sk-7Cl" id="WNh-ZZ-MKE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVd-hh-1kK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

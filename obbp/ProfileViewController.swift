@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Locksmith
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageDeleteDelegate {
     
@@ -22,6 +21,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     var messages: [Message] = [Message]()
     var selectedMessage: Message? = nil
     var selectedIndexPath: Int? = nil
+    var user: User? = nil
     
     // Objects
     let profileService = ProfileService()
@@ -30,15 +30,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     // Init
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        let session = Locksmith.loadDataForUserAccount("userSession")
-        let user = session!["user"] as! NSDictionary
+        let sessionData = Session.sharedInstance.getSessionData()
+        self.user = sessionData!.user
         
-        let bloodGroupAndLocationDetail: String = "\(user["bloodGroup"]!), \(user["state"]!)"
+        let bloodGroupAndLocationDetail: String = "\(self.user!.bloodGroup!), \(self.user!.state!)"
         
-        usernameLabel.text = user["username"] as? String
-        fullNameLabel.text = user["fullName"] as? String
+        usernameLabel.text = self.user?.username
+        fullNameLabel.text = self.user?.fullName
         bloodGroupAndLocationLabel.text = bloodGroupAndLocationDetail
         profileImageView.image = UIImage(named: "user.jpg")
         
@@ -114,6 +112,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             vc?.indexPath = self.selectedIndexPath!
             vc?.message = self.selectedMessage!
             vc?.profileController = self
+        }
+        
+        if segue.identifier == "fromProfileViewToProfileEditView" {
+            let vc = segue.destinationViewController as? ProfileEditTableViewController
+            vc?.user = self.user
         }
     }
     

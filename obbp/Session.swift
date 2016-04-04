@@ -16,16 +16,32 @@ class Session {
     var user: NSDictionary?
     
     //  GET SESSION DATA
-    func getSessionData() -> (token: String, user: NSDictionary)? {
+    func getSessionData() -> (token: String, user: User)? {
         guard let token = self.session?["token"] as? String else {
             print("Token not present.")
             return (nil)
         }
         
-        guard let user = self.session?["user"] as? NSDictionary else {
+        guard let userDict = self.session?["user"] as? NSDictionary else {
             print("User not present.")
             return (nil)
         }
+        
+        var user : User = User()
+        user.id = userDict["_id"] as? String
+        user.username = userDict["username"] as? String
+        user.firstName = userDict["firstName"] as? String
+        user.lastName = userDict["lastName"] as? String
+        user.fullName = userDict["fullName"] as? String
+        user.address = userDict["address"] as? String
+        user.bloodGroup = userDict["bloodGroup"] as? String
+        user.dateOfBirth = userDict["dateOfBirth"] as? String
+        user.email = userDict["email"] as? String
+        user.gender = userDict["gender"] as? String
+        user.mobile = userDict["mobile"] as? Int
+        user.pincode = userDict["pincode"] as? Int
+        user.state = userDict["state"] as? String
+        user.weight = userDict["weight"] as? Int
         
         return(token, user)
     }

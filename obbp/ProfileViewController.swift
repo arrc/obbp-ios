@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     // Properties
     var messages: [Message] = [Message]()
+    var selectedMessage: Message? = nil
     
     // Objects
     let profileService = ProfileService()
@@ -87,6 +88,19 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 //        cell.dateLabel.text = message.date
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedMessage = self.messages[indexPath.row]
+        self.tblView.deselectRowAtIndexPath(indexPath, animated: false)
+        performSegueWithIdentifier("fromProfileViewToMessageDetailView", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "fromProfileViewToMessageDetailView" {
+            let vc = segue.destinationViewController as? MessageDetailViewController
+            vc?.message = self.selectedMessage!
+        }
     }
     
 }

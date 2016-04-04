@@ -21,10 +21,12 @@ class MessageService {
             
             for messageData in data {
                 var message = Message()
+                let sender = messageData["sender"] as? NSDictionary
+                
                 message.id = messageData["_id"] as? String
                 message.message = messageData["message"] as? String
                 message.date = messageData["created"] as? NSDate
-                message.sender = messageData["sender"] as? String
+                message.sender = sender!["fullName"] as? String
                 messages.append(message)
             }
             

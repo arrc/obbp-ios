@@ -45,10 +45,7 @@ class SearchResultsDetailViewController: UIViewController {
     }
     
     @IBAction func sendMessagePressed(sender: UIButton) {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.performSegueWithIdentifier("segueSendMessage", sender: self)
-        })
-//        performSegueWithIdentifier("segueSendMessage", sender: self)
+        performSegueWithIdentifier("segueSendMessage", sender: self)
     }
     
     

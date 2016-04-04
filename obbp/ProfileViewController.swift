@@ -9,7 +9,7 @@
 import UIKit
 import Locksmith
 
-class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MessageDeleteDelegate {
     
     // Outlets
     @IBOutlet weak var usernameLabel: UILabel!
@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     // Properties
     var messages: [Message] = [Message]()
     var selectedMessage: Message? = nil
+    var selectedIndexPath: Int? = nil
     
     // Objects
     let profileService = ProfileService()
@@ -51,10 +52,20 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tblView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func didDeleteMessage(index: Int) { // TODO:- NOT GETTING CALLED
+        print("INDEX: \t", index)
+        self.messages.removeAtIndex(index)
+        self.tblView.reloadData()
     }
     
     @IBAction func didPressLogoutButton(sender: UIButton) {
@@ -82,7 +93,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tblView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! MessageTableViewCell
         let message = self.messages[indexPath.row]
-        print(message)
+        
         cell.messageLabel.text = message.message
         cell.senderLabel.text = message.sender
 //        cell.dateLabel.text = message.date
@@ -92,6 +103,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedMessage = self.messages[indexPath.row]
+        self.selectedIndexPath = indexPath.row
         self.tblView.deselectRowAtIndexPath(indexPath, animated: false)
         performSegueWithIdentifier("fromProfileViewToMessageDetailView", sender: self)
     }
@@ -99,7 +111,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "fromProfileViewToMessageDetailView" {
             let vc = segue.destinationViewController as? MessageDetailViewController
+            vc?.indexPath = self.selectedIndexPath!
             vc?.message = self.selectedMessage!
+            vc?.profileController = self
         }
     }
     

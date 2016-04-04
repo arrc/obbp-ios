@@ -22,6 +22,7 @@
 		9070BF751CAFEC4700043733 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF741CAFEC4700043733 /* MessageService.swift */; };
 		907986381C6F9A2100E97084 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907986371C6F9A2100E97084 /* Session.swift */; };
 		907FAF471CB2251900FD0FDF /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAF461CB2251900FD0FDF /* MessageDetailViewController.swift */; };
+		907FAF491CB2310000FD0FDF /* ProfileEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAF481CB2310000FD0FDF /* ProfileEditTableViewController.swift */; };
 		908346BF1C70246700426287 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346BE1C70246700426287 /* RequestViewController.swift */; };
 		90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B339781C6FBC620095B2B4 /* ProfileViewController.swift */; };
 		90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		9070BF741CAFEC4700043733 /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		907986371C6F9A2100E97084 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		907FAF461CB2251900FD0FDF /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
+		907FAF481CB2310000FD0FDF /* ProfileEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditTableViewController.swift; sourceTree = "<group>"; };
 		908346BE1C70246700426287 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		908346C01C7024B100426287 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		90B339781C6FBC620095B2B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -95,13 +97,21 @@
 			isa = PBXGroup;
 			children = (
 				90B339781C6FBC620095B2B4 /* ProfileViewController.swift */,
-				9070BF6D1CAFE95F00043733 /* MessageTableViewCell.swift */,
+				907FAF481CB2310000FD0FDF /* ProfileEditTableViewController.swift */,
 				9070BF701CAFE9B900043733 /* ProfileService.swift */,
+			);
+			name = profile;
+			sourceTree = "<group>";
+		};
+		907FAF4A1CB2751800FD0FDF /* Message */ = {
+			isa = PBXGroup;
+			children = (
 				9070BF721CAFEBC300043733 /* Message.swift */,
 				9070BF741CAFEC4700043733 /* MessageService.swift */,
 				907FAF461CB2251900FD0FDF /* MessageDetailViewController.swift */,
+				9070BF6D1CAFE95F00043733 /* MessageTableViewCell.swift */,
 			);
-			name = profile;
+			name = Message;
 			sourceTree = "<group>";
 		};
 		90BAD1181C6E2D0200D1DCDA = {
@@ -130,6 +140,7 @@
 				90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */,
 				901A4B991C6F1011004699FE /* LoginViewController.swift */,
 				901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */,
+				907FAF4A1CB2751800FD0FDF /* Message */,
 				9070BF6F1CAFE97F00043733 /* profile */,
 				908346BE1C70246700426287 /* RequestViewController.swift */,
 				90E9E6C81C75A10A0041FA89 /* Search */,
@@ -305,6 +316,7 @@
 				90E9E6CA1C75A2360041FA89 /* ResultsTableViewCell.swift in Sources */,
 				9070BF6A1CAEF92D00043733 /* NetworkManager.swift in Sources */,
 				9070BF6C1CAF002B00043733 /* SearchService.swift in Sources */,
+				907FAF491CB2310000FD0FDF /* ProfileEditTableViewController.swift in Sources */,
 				90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */,
 				9070BF751CAFEC4700043733 /* MessageService.swift in Sources */,
 				907986381C6F9A2100E97084 /* Session.swift in Sources */,

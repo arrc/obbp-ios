@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MessageDeleteDelegate {
+    func didDeleteMessage(index: Int)
+}
+
 class MessageDetailViewController: UIViewController {
     
     // Outlets
@@ -17,6 +21,9 @@ class MessageDetailViewController: UIViewController {
     
     // Properties
     var message: Message? = nil
+    var indexPath: Int? = nil
+    var delegate: MessageDeleteDelegate? = nil
+    var profileController: ProfileViewController = ProfileViewController()
     
     // Objects
     
@@ -40,7 +47,11 @@ class MessageDetailViewController: UIViewController {
     }
 
     @IBAction func deleteButtonPressed(sender: UIBarButtonItem) {
-        
+        // TODO: make api delete request
+        delegate?.didDeleteMessage(self.indexPath!)
+        self.profileController.messages.removeAtIndex(self.indexPath!)
+        self.profileController.tblView.reloadData()
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
 }

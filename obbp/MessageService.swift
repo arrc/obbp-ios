@@ -36,7 +36,7 @@ class MessageService {
     }
     
     func deleteMessage(messageId: String, callback: (success: Bool?, error: String?) -> Void) {
-        NetworkManager.shared.request(.DELETE, endpoint: "/sapi/message/\(messageId)", params: nil, debug: true) { (result, error) -> Void in
+        NetworkManager.shared.request(.DELETE, endpoint: "/api/message/\(messageId)", params: nil, debug: true) { (result, error) -> Void in
             guard error == nil else {
                 callback(success: false, error: error)
                 return

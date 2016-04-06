@@ -43,7 +43,6 @@ class SearchResultMessageViewController: UIViewController {
         }
         
         search.sendMessage(payload) { (result, error) -> Void in // TODO: Error handling
-            print(result!)
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }

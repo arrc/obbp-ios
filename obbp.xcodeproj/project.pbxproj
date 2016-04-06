@@ -11,6 +11,8 @@
 		90144E2B1C776840008D785C /* SearchResultMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90144E2A1C776840008D785C /* SearchResultMessageViewController.swift */; };
 		901A4B9A1C6F1011004699FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B991C6F1011004699FE /* LoginViewController.swift */; };
 		901A4B9C1C6F1027004699FE /* SIgnupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */; };
+		9033585F1CB4D0C8000C0F29 /* CampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033585E1CB4D0C8000C0F29 /* CampService.swift */; };
+		903358611CB4D121000C0F29 /* Camp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903358601CB4D121000C0F29 /* Camp.swift */; };
 		903542EB1C74F54E00494AC0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903542EA1C74F54D00494AC0 /* UserModel.swift */; };
 		906829621C70875C00C39C82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346C01C7024B100426287 /* SearchViewController.swift */; };
 		9070BF681CAEEA9C00043733 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070BF671CAEEA9C00043733 /* UserService.swift */; };
@@ -45,6 +47,8 @@
 		90144E2A1C776840008D785C /* SearchResultMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultMessageViewController.swift; sourceTree = "<group>"; };
 		901A4B991C6F1011004699FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIgnupViewController.swift; sourceTree = "<group>"; };
+		9033585E1CB4D0C8000C0F29 /* CampService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampService.swift; sourceTree = "<group>"; };
+		903358601CB4D121000C0F29 /* Camp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camp.swift; sourceTree = "<group>"; };
 		903542EA1C74F54D00494AC0 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9070BF671CAEEA9C00043733 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9070BF691CAEF92D00043733 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -98,9 +102,9 @@
 		9070BF6F1CAFE97F00043733 /* profile */ = {
 			isa = PBXGroup;
 			children = (
+				9070BF701CAFE9B900043733 /* ProfileService.swift */,
 				90B339781C6FBC620095B2B4 /* ProfileViewController.swift */,
 				907FAF481CB2310000FD0FDF /* ProfileEditTableViewController.swift */,
-				9070BF701CAFE9B900043733 /* ProfileService.swift */,
 			);
 			name = profile;
 			sourceTree = "<group>";
@@ -108,8 +112,8 @@
 		907FAF4A1CB2751800FD0FDF /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				9070BF721CAFEBC300043733 /* Message.swift */,
 				9070BF741CAFEC4700043733 /* MessageService.swift */,
+				9070BF721CAFEBC300043733 /* Message.swift */,
 				907FAF461CB2251900FD0FDF /* MessageDetailViewController.swift */,
 				9070BF6D1CAFE95F00043733 /* MessageTableViewCell.swift */,
 			);
@@ -141,6 +145,7 @@
 				907986371C6F9A2100E97084 /* Session.swift */,
 				90E9E6C21C756AD50041FA89 /* SandboxViewController.swift */,
 				90BAD1261C6E2D0300D1DCDA /* HomeViewController.swift */,
+				9033585E1CB4D0C8000C0F29 /* CampService.swift */,
 				901A4B991C6F1011004699FE /* LoginViewController.swift */,
 				901A4B9B1C6F1027004699FE /* SIgnupViewController.swift */,
 				907FAF4A1CB2751800FD0FDF /* Message */,
@@ -156,6 +161,7 @@
 				9070BF671CAEEA9C00043733 /* UserService.swift */,
 				9070BF691CAEF92D00043733 /* NetworkManager.swift */,
 				907FAF4B1CB2D51D00FD0FDF /* Utility.swift */,
+				903358601CB4D121000C0F29 /* Camp.swift */,
 			);
 			path = obbp;
 			sourceTree = "<group>";
@@ -171,12 +177,12 @@
 		90E9E6C81C75A10A0041FA89 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9070BF6B1CAF002B00043733 /* SearchService.swift */,
 				908346C01C7024B100426287 /* SearchViewController.swift */,
 				90E9E6C41C75A0E00041FA89 /* SearchResultsViewController.swift */,
 				90E9E6C61C75A0FA0041FA89 /* SearchResultsDetailViewController.swift */,
 				90144E2A1C776840008D785C /* SearchResultMessageViewController.swift */,
 				90E9E6C91C75A2360041FA89 /* ResultsTableViewCell.swift */,
-				9070BF6B1CAF002B00043733 /* SearchService.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -318,8 +324,10 @@
 				906829621C70875C00C39C82 /* SearchViewController.swift in Sources */,
 				90E9E6CA1C75A2360041FA89 /* ResultsTableViewCell.swift in Sources */,
 				9070BF6A1CAEF92D00043733 /* NetworkManager.swift in Sources */,
+				9033585F1CB4D0C8000C0F29 /* CampService.swift in Sources */,
 				9070BF6C1CAF002B00043733 /* SearchService.swift in Sources */,
 				907FAF491CB2310000FD0FDF /* ProfileEditTableViewController.swift in Sources */,
+				903358611CB4D121000C0F29 /* Camp.swift in Sources */,
 				90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */,
 				9070BF751CAFEC4700043733 /* MessageService.swift in Sources */,
 				907986381C6F9A2100E97084 /* Session.swift in Sources */,

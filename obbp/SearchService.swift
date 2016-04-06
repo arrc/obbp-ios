@@ -11,10 +11,11 @@ import Alamofire
 
 class SearchService {
     
+    // TODO:- count results, alert if 0.
     func performSearch(query: [String: AnyObject], callback: (users: [User]?, error: String?) -> Void) {
         var users: [User] = [User]()
         
-        NetworkManager.shared.request(.GET, endpoint: "/search", params: query) { (result, error) -> Void in
+        NetworkManager.shared.request(.GET, endpoint: "/search", params: query, debug: false) { (result, error) -> Void in
             guard let data = result!["data"] as? NSArray else {
                 callback(users: nil, error: "Got poorly formated response from server.")
                 return
@@ -34,7 +35,7 @@ class SearchService {
     }
     
     func sendMessage(payload: [String: AnyObject], callback: (result: NSDictionary?, error: String? ) -> Void) {
-        NetworkManager.shared.request(.POST, endpoint: "/api/message", params: payload) { (result, error) -> Void in
+        NetworkManager.shared.request(.POST, endpoint: "/api/message", params: payload, debug: false) { (result, error) -> Void in
             guard error == nil else {
                 callback(result: nil, error: "Error: \(error)")
                 return

@@ -21,6 +21,9 @@ class ProfileEditTableViewController: UITableViewController {
     
     // Properties
     var user: User? = nil
+    
+    // Objects
+    var profileService = ProfileService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +59,18 @@ class ProfileEditTableViewController: UITableViewController {
         var params: [String: AnyObject] = [String: AnyObject]()
         params["address"] = self.addressTextField.text
         params["state"] = self.stateTextField.text
-        print(params)
+        
+        profileService.updateProfile(params) { (user, error) -> Void in
+            guard error == nil else {
+                print(error)
+                return
+            }
+            print(user!)
+            self.addressTextField.text = user?.address
+            self.stateTextField.text = user?.state
+            
+//            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
         
     }
 }

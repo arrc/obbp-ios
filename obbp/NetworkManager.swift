@@ -28,12 +28,7 @@ class NetworkManager {
         Alamofire.request(method, url, parameters: parameters, headers: Session.sharedInstance.getHeader()).responseJSON { (response) -> Void in
             
             if debug {
-                print("=========================================================")
-                print("URL: \t", response.request!.URL!)  // original URL request
-                print("Data: \n", response)     // server data
-                print("Result: \t", response.result)   // result of response serialization
-                print("Error: \t", response.result.error)
-                print("=========================================================")
+                self.debugMessage(response, parameters: parameters)
             }
             
             guard response.result.isSuccess else {
@@ -58,8 +53,30 @@ class NetworkManager {
             }
             
             callback(result: JSON, error: nil)
+        } // Alamofire
+    } // request
+    
+    private func debugMessage(response: Response<AnyObject, NSError>, parameters: [String : AnyObject]?) {
+        
+        var _parameters = "No params were supplied."
+        var _error = "No errors."
+        
+        if parameters != nil {
+            _parameters = "\(parameters!)"
         }
-    }
+        
+        if response.result.error != nil {
+            _error = "\(response.result.error!)"
+        }
+        
+        print("===================================================================")
+        print("URL: \t", response.request!.URL!)  // original URL request
+        print("Params: \t", _parameters)
+        print("Data: \n", response)     // server data
+        print("Result: \t", response.result)   // result of response serialization
+        print("Error: \t", _error)
+        print("===================================================================")
+    } // debugMessage
     
 //    singleton
     static let shared = NetworkManager() // http://krakendev.io/blog/the-right-way-to-write-a-singleton

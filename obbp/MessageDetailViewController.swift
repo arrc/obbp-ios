@@ -26,6 +26,7 @@ class MessageDetailViewController: UIViewController {
     var profileController: ProfileViewController = ProfileViewController()
     
     // Objects
+    let messageService = MessageService()
     
     // Init
     override func viewDidLoad() {
@@ -48,10 +49,18 @@ class MessageDetailViewController: UIViewController {
 
     @IBAction func deleteButtonPressed(sender: UIBarButtonItem) {
         // TODO: make api delete request
-        delegate?.didDeleteMessage(self.indexPath!)
-        self.profileController.messages.removeAtIndex(self.indexPath!)
-        self.profileController.tblView.reloadData()
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+        messageService.deleteMessage(message!.id!) { (success, error) -> Void in
+            guard error == nil else {
+                print("Message delete error: \n", error!)
+                return
+            }
+            
+            self.delegate?.didDeleteMessage(self.indexPath!)
+            self.profileController.messages.removeAtIndex(self.indexPath!)
+            self.profileController.tblView.reloadData()
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
     }
     
 }

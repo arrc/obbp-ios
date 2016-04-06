@@ -930,12 +930,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx6-Sk-7Cl">
-                                                    <rect key="frame" x="8" y="11" width="299" height="21"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvl-EZ-GQp">
+                                                    <rect key="frame" x="8" y="8" width="304" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="statePicker:" destination="mKp-49-KxH" eventType="editingDidEnd" id="oW8-zX-gKN"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -988,7 +990,7 @@
                         <outlet property="newPasswordTextField" destination="ppL-85-VaY" id="vqm-hl-QjG"/>
                         <outlet property="oldPasswordTextField" destination="5O0-BW-rHZ" id="MBL-9s-Gvb"/>
                         <outlet property="pincodeTextField" destination="ZSE-yJ-T5A" id="lsx-Dq-V6Y"/>
-                        <outlet property="stateTextField" destination="Yx6-Sk-7Cl" id="WNh-ZZ-MKE"/>
+                        <outlet property="stateTextField" destination="mvl-EZ-GQp" id="aSB-jJ-EDA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVd-hh-1kK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1042,7 +1044,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs0-vc-pOH">
-                                <rect key="frame" x="120" y="225" width="71" height="30"/>
+                                <rect key="frame" x="15" y="225" width="280" height="47"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Search"/>
                                 <connections>

@@ -13,7 +13,7 @@ class MessageService {
     func fetchMessages(callback: (messages: [Message]?, error: String?) -> Void) {
         var messages: [Message] = [Message]()
         
-        NetworkManager.shared.request(.GET, endpoint: "/api/messages", params: nil) { (result, error) -> Void in
+        NetworkManager.shared.request(.GET, endpoint: "/api/messages", params: nil, debug: false) { (result, error) -> Void in
             guard let data = result!["data"] as? NSArray else {
                 callback(messages: nil, error: "Got poorly formated response from server.")
                 return
@@ -32,6 +32,17 @@ class MessageService {
             
             callback(messages: messages, error: nil)
 
+        }
+    }
+    
+    func deleteMessage(messageId: String, callback: (success: Bool?, error: String?) -> Void) {
+        NetworkManager.shared.request(.DELETE, endpoint: "/sapi/message/\(messageId)", params: nil, debug: true) { (result, error) -> Void in
+            guard error == nil else {
+                callback(success: false, error: error)
+                return
+            }
+            
+            callback(success: true, error: nil)
         }
     }
 }

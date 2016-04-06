@@ -13,6 +13,7 @@ class NetworkManager {
     private let HOSTNAME = "http://localhost:4000"
     
     func request(method: Alamofire.Method, endpoint: URLStringConvertible, params: [String: AnyObject]?,
+        debug: Bool = false,
         callback: (result: NSDictionary?, error: String?) -> Void) {
         
         let url: URLStringConvertible = "\(HOSTNAME)\(endpoint)"
@@ -25,13 +26,19 @@ class NetworkManager {
         }
             
         Alamofire.request(method, url, parameters: parameters, headers: Session.sharedInstance.getHeader()).responseJSON { (response) -> Void in
-            print(response)
+            
+            if debug {
+                print("=========================================================")
+                print("URL: \t", response.request!.URL!)  // original URL request
+                print("Data: \n", response)     // server data
+                print("Result: \t", response.result)   // result of response serialization
+                print("Error: \t", response.result.error)
+                print("=========================================================")
+            }
             
             guard response.result.isSuccess else {
                 let error = response.result.error!
                 var errorString: String = ""
-                print(error)
-                print("Error \t", error.localizedDescription)
                 
                 if(error.code == -1004) { // Server offline or unreachable.
                     errorString = error.localizedDescription

@@ -31,6 +31,11 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.stateTextField.text = ""
+        self.bloodGroupTextField.text = ""
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,7 +54,7 @@ class SearchViewController: UIViewController {
     
     // state
     @IBAction func statePicker(sender: UITextField) {
-        ActionSheetStringPicker.showPickerWithTitle("State", rows: ["Arizona", "Mumbai", "Pune"], initialSelection: 1, doneBlock: {
+        ActionSheetStringPicker.showPickerWithTitle("State", rows: Utility.sharedInstance.states, initialSelection: 1, doneBlock: {
             picker, value, index in
             
             print("value = \(value)")
@@ -63,9 +68,15 @@ class SearchViewController: UIViewController {
     @IBAction func searchPressed(sender: UIButton) {
         // empty array
         self.users.removeAll(keepCapacity: false)
-
+        var query = [String: String]()
         let bloodGroup =  self.bloodGroupTextField.text! as String
-        let query = ["bg": bloodGroup]
+        let state = self.stateTextField.text! as String
+        
+        if state.isEmpty {
+            query = ["bg": bloodGroup]
+        } else {
+            query = ["bg": bloodGroup, "state": state]
+        }
 
         // Perform search
         search.performSearch(query) { (users, error) -> Void in

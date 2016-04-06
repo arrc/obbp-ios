@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 
 class ProfileEditTableViewController: UITableViewController {
     
@@ -15,7 +16,7 @@ class ProfileEditTableViewController: UITableViewController {
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var mobileTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
-    @IBOutlet weak var stateTextField: UILabel!
+    @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var pincodeTextField: UITextField!
     
     // Properties
@@ -35,11 +36,27 @@ class ProfileEditTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // state
+    @IBAction func statePicker(sender: UITextField) {
+        ActionSheetStringPicker.showPickerWithTitle("State", rows: Utility.sharedInstance.states, initialSelection: 1, doneBlock: {
+            picker, value, index in
+            
+            print("value = \(value)")
+            print("index = \(index)")
+            self.stateTextField.text = index as? String
+            return
+            }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
+    }
+    
     @IBAction func changePasswordPressed(sender: UIButton) {
         print("Change password pressed.")
     }
     
     @IBAction func updateProfilePressed(sender: UIButton) {
-        print("Update profile pressed.")
+        var params: [String: AnyObject] = [String: AnyObject]()
+        params["address"] = self.addressTextField.text
+        params["state"] = self.stateTextField.text
+        print(params)
+        
     }
 }

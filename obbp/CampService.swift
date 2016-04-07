@@ -11,7 +11,7 @@ import Foundation
 class CampService {
     
     func fetchCamps(callback: (camps: [Camp]?, error: String?) -> Void) {
-        NetworkManager.shared.request(.GET, endpoint: "/camps", params: nil, debug: true) { (result, error) -> Void in
+        NetworkManager.shared.request(.GET, endpoint: "/camps", params: nil, debug: false) { (result, error) -> Void in
             guard error == nil else {
                 callback(camps: nil, error: "Error: \(error!)")
                 return

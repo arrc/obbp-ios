@@ -55,7 +55,7 @@ class NetworkManager {
             callback(result: JSON, error: nil)
         } // Alamofire
     } // request
-    
+
     private func debugMessage(response: Response<AnyObject, NSError>, parameters: [String : AnyObject]?) {
         
         var _parameters = "No params were supplied."

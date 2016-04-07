@@ -26,6 +26,19 @@
 		907FAF471CB2251900FD0FDF /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAF461CB2251900FD0FDF /* MessageDetailViewController.swift */; };
 		907FAF491CB2310000FD0FDF /* ProfileEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAF481CB2310000FD0FDF /* ProfileEditTableViewController.swift */; };
 		907FAF4C1CB2D51D00FD0FDF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAF4B1CB2D51D00FD0FDF /* Utility.swift */; };
+		90818DD91CB66E3400C36759 /* Arvo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DD51CB66E2C00C36759 /* Arvo-Bold.ttf */; };
+		90818DDA1CB66E3700C36759 /* Arvo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DD61CB66E2C00C36759 /* Arvo-BoldItalic.ttf */; };
+		90818DDB1CB66E3A00C36759 /* Arvo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DD71CB66E2C00C36759 /* Arvo-Italic.ttf */; };
+		90818DDC1CB66E3D00C36759 /* Arvo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DD81CB66E2C00C36759 /* Arvo-Regular.ttf */; };
+		90818DE11CB66E5400C36759 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DDD1CB66E5400C36759 /* Lato-Bold.ttf */; };
+		90818DE21CB66E5400C36759 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DDE1CB66E5400C36759 /* Lato-Italic.ttf */; };
+		90818DE31CB66E5400C36759 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DDF1CB66E5400C36759 /* Lato-Light.ttf */; };
+		90818DE41CB66E5400C36759 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DE01CB66E5400C36759 /* Lato-Regular.ttf */; };
+		90818DEA1CB66E7100C36759 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DE51CB66E7100C36759 /* Raleway-Bold.ttf */; };
+		90818DEB1CB66E7100C36759 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DE61CB66E7100C36759 /* Raleway-Italic.ttf */; };
+		90818DEC1CB66E7100C36759 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DE71CB66E7100C36759 /* Raleway-Light.ttf */; };
+		90818DED1CB66E7100C36759 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DE81CB66E7100C36759 /* Raleway-Medium.ttf */; };
+		90818DEE1CB66E7100C36759 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90818DE91CB66E7100C36759 /* Raleway-Regular.ttf */; };
 		908346BF1C70246700426287 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908346BE1C70246700426287 /* RequestViewController.swift */; };
 		90B339791C6FBC630095B2B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B339781C6FBC620095B2B4 /* ProfileViewController.swift */; };
 		90BAD1251C6E2D0300D1DCDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAD1241C6E2D0300D1DCDA /* AppDelegate.swift */; };
@@ -61,6 +74,19 @@
 		907FAF461CB2251900FD0FDF /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		907FAF481CB2310000FD0FDF /* ProfileEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditTableViewController.swift; sourceTree = "<group>"; };
 		907FAF4B1CB2D51D00FD0FDF /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		90818DD51CB66E2C00C36759 /* Arvo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arvo-Bold.ttf"; path = "Fonts/Arvo/Arvo-Bold.ttf"; sourceTree = "<group>"; };
+		90818DD61CB66E2C00C36759 /* Arvo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arvo-BoldItalic.ttf"; path = "Fonts/Arvo/Arvo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		90818DD71CB66E2C00C36759 /* Arvo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arvo-Italic.ttf"; path = "Fonts/Arvo/Arvo-Italic.ttf"; sourceTree = "<group>"; };
+		90818DD81CB66E2C00C36759 /* Arvo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arvo-Regular.ttf"; path = "Fonts/Arvo/Arvo-Regular.ttf"; sourceTree = "<group>"; };
+		90818DDD1CB66E5400C36759 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "Fonts/Lato/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		90818DDE1CB66E5400C36759 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "Fonts/Lato/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		90818DDF1CB66E5400C36759 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Fonts/Lato/Lato-Light.ttf"; sourceTree = "<group>"; };
+		90818DE01CB66E5400C36759 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "Fonts/Lato/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		90818DE51CB66E7100C36759 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "Fonts/Raleway/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		90818DE61CB66E7100C36759 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Italic.ttf"; path = "Fonts/Raleway/Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		90818DE71CB66E7100C36759 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "Fonts/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		90818DE81CB66E7100C36759 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "Fonts/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		90818DE91CB66E7100C36759 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "Fonts/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		908346BE1C70246700426287 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		908346C01C7024B100426287 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		90B339781C6FBC620095B2B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +146,26 @@
 			name = Message;
 			sourceTree = "<group>";
 		};
+		90818DD41CB6632D00C36759 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				90818DD51CB66E2C00C36759 /* Arvo-Bold.ttf */,
+				90818DD61CB66E2C00C36759 /* Arvo-BoldItalic.ttf */,
+				90818DD71CB66E2C00C36759 /* Arvo-Italic.ttf */,
+				90818DD81CB66E2C00C36759 /* Arvo-Regular.ttf */,
+				90818DDD1CB66E5400C36759 /* Lato-Bold.ttf */,
+				90818DDE1CB66E5400C36759 /* Lato-Italic.ttf */,
+				90818DDF1CB66E5400C36759 /* Lato-Light.ttf */,
+				90818DE01CB66E5400C36759 /* Lato-Regular.ttf */,
+				90818DE51CB66E7100C36759 /* Raleway-Bold.ttf */,
+				90818DE61CB66E7100C36759 /* Raleway-Italic.ttf */,
+				90818DE71CB66E7100C36759 /* Raleway-Light.ttf */,
+				90818DE81CB66E7100C36759 /* Raleway-Medium.ttf */,
+				90818DE91CB66E7100C36759 /* Raleway-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		90BAD1181C6E2D0200D1DCDA = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +208,7 @@
 				9070BF691CAEF92D00043733 /* NetworkManager.swift */,
 				907FAF4B1CB2D51D00FD0FDF /* Utility.swift */,
 				903358601CB4D121000C0F29 /* Camp.swift */,
+				90818DD41CB6632D00C36759 /* Fonts */,
 			);
 			path = obbp;
 			sourceTree = "<group>";
@@ -257,9 +304,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90818DE21CB66E5400C36759 /* Lato-Italic.ttf in Resources */,
+				90818DED1CB66E7100C36759 /* Raleway-Medium.ttf in Resources */,
+				90818DEE1CB66E7100C36759 /* Raleway-Regular.ttf in Resources */,
+				90818DEA1CB66E7100C36759 /* Raleway-Bold.ttf in Resources */,
 				90E9E6C01C7569B30041FA89 /* Sandbox.storyboard in Resources */,
+				90818DDA1CB66E3700C36759 /* Arvo-BoldItalic.ttf in Resources */,
+				90818DE31CB66E5400C36759 /* Lato-Light.ttf in Resources */,
 				90BAD12F1C6E2D0300D1DCDA /* LaunchScreen.storyboard in Resources */,
+				90818DEC1CB66E7100C36759 /* Raleway-Light.ttf in Resources */,
+				90818DDC1CB66E3D00C36759 /* Arvo-Regular.ttf in Resources */,
+				90818DDB1CB66E3A00C36759 /* Arvo-Italic.ttf in Resources */,
+				90818DEB1CB66E7100C36759 /* Raleway-Italic.ttf in Resources */,
+				90818DE41CB66E5400C36759 /* Lato-Regular.ttf in Resources */,
 				90BAD12C1C6E2D0300D1DCDA /* Assets.xcassets in Resources */,
+				90818DD91CB66E3400C36759 /* Arvo-Bold.ttf in Resources */,
+				90818DE11CB66E5400C36759 /* Lato-Bold.ttf in Resources */,
 				90BAD12A1C6E2D0300D1DCDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -51,7 +51,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tblView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-        var camp: Camp = self.camps[indexPath.row]
+        let camp: Camp = self.camps[indexPath.row]
         
         cell.textLabel?.text = camp.state
         cell.detailTextLabel?.text = camp.description

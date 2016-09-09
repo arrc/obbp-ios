@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class NetworkManager {
-    private let HOSTNAME = "http://localhost:4000"
+    private let HOSTNAME = "http://obbp.arrc.in"
     
     func request(method: Alamofire.Method, endpoint: URLStringConvertible, params: [String: AnyObject]?,
         debug: Bool = false,

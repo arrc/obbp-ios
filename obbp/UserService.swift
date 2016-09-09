@@ -24,7 +24,7 @@ class UserService {
     
     //  LOGIN
     func login(credentials : [String: String], completion: () -> Void) {
-        Alamofire.request(.POST, "http://localhost:4000/login", parameters: credentials).responseJSON { response in
+        Alamofire.request(.POST, "http://obbp.arrc.in/login", parameters: credentials).responseJSON { response in
             print(response)
             if let JSON = response.result.value {
                 let token = JSON["token"] as! String

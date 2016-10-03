@@ -141,7 +141,7 @@ class SIgnupViewController: UITableViewController {
     }
     
     func makeSignupRequest(params : [String: AnyObject]){
-        let url: String = "http://localhost:4000/signup"
+        let url: String = "http://obbp.arrc.in/signup"
         
         
         Alamofire.request(.POST, url, parameters: params).responseJSON { (response) -> Void in

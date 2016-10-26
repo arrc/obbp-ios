@@ -1,15 +1,15 @@
 This is an iPhone app for [Obbp](http://obbp.arrc.in)
 
 ### Features
-- Search for donors with matching blood group.
-- List of upcoming blood donation camps in your state.
 - Signup / Signin
 - Token authentication
+- Search for donors with matching blood group.
+- List of upcoming blood donation camps in your state.
 - Edit profile informations
 - Private messages
 - Send message to users
 
-## Upcoming blood donatin camps
+## Upcoming blood donation camps
 ![](http://arrc.in/img/screenshots/obbp-ios/obbp-ios-1.jpg)
 
 ## User profile
